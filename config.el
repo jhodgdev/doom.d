@@ -88,3 +88,10 @@
 
 ;; Set Fourmolu as my default Haskell formatter.
 (setq lsp-haskell-formatting-provider "fourmolu")
+
+;; Show fill column by default.
+(global-display-fill-column-indicator-mode 1)
+
+;; By default, draw fill column in the 72nd column.
+(setq display-fill-column-indicator 71)
+

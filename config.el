@@ -29,7 +29,7 @@
 ;; refresh your font settings. If Emacs still can't find your font, it likely
 ;; wasn't installed correctly. Font issues are rarely Doom issues!
 (setq doom-font (font-spec :family "FiraCode Nerd Font" :size 19))
-(setq doom-variable-pitch-font (font-spec :family "Inter" :size 19))
+;; (setq doom-variable-pitch-font (font-spec :family "Inter" :size 19))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -93,5 +93,8 @@
 (global-display-fill-column-indicator-mode 1)
 
 ;; By default, draw fill column in the 72nd column.
-(setq display-fill-column-indicator 71)
+(setq fill-column 72)
 
+(add-hook 'vterm-mode-hook
+          (lambda ()
+            (setq display-fill-column-indicator nil)))
